@@ -1,0 +1,27 @@
+{% load static %}
+
+<html>
+
+    <head>
+        <title>Rapperswil</title>
+        <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+        <link rel="stylesheet" href="{% static 'css/history.css' %}">
+    </head>
+
+<body>
+
+<h1> <a href=""> Rappwerswil </a></h1>
+    <p>Hi There!</p>
+
+    {% for Entry in Entries %}
+
+    <div>
+        <p>Title: {{Entry.Title}}</p>
+        <p>Description: {{Entry.Description}}</p>
+        <img src="{{STATIC_ROOT}}/{{Entry.Photograph.url}}">
+    </div>
+    {% endfor %}
+
+</body>
+
+</html>
